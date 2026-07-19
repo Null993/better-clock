@@ -4,14 +4,15 @@ plugins {
 
 android {
     namespace "io.github.miuiclock"
-    compileSdk 35
+    // Quail 3 ships API 37; the APK still targets Android 16 (API 36).
+    compileSdk 37
 
     defaultConfig {
         applicationId "io.github.miuiclock"
         minSdk 31
-        targetSdk 35
-        versionCode 1
-        versionName "1.0.0"
+        targetSdk 36
+        versionCode 4
+        versionName "1.0.3"
     }
 
     buildTypes {
