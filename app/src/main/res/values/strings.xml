@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">小米锁屏运营商时钟</string>
+    <string name="module_description">将 HyperOS 锁屏左上角运营商文字替换为实时秒钟</string>
+</resources>
