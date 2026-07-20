@@ -48,6 +48,10 @@ keyPassword=你的密钥密码
 配置签名后，APK 位于 `app/build/outputs/apk/release/app-release.apk`。未配置签名时 Gradle
 仍可生成 unsigned Release，但不能直接安装或作为正式版本发布。
 
+本模块使用 legacy Xposed API，因此推荐作用域由 Manifest 中的 `xposedscope` 元数据声明；
+`META-INF/xposed/scope.list` 仅作为未来迁移到 modern Xposed API 时的同源声明，不能代替
+legacy 元数据。
+
 ## 兼容策略
 
 HyperOS 各版本会混淆 SystemUI 类名，因此模块不绑定某个小米私有类，而是 Hook 稳定的

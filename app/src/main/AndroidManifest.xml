@@ -10,5 +10,6 @@
         <meta-data android:name="xposeddescription" android:value="@string/module_description" />
         <meta-data android:name="xposedminversion" android:value="93" />
         <meta-data android:name="xposedauthor" android:value="null993" />
+        <meta-data android:name="xposedscope" android:value="com.android.systemui" />
     </application>
 </manifest>
