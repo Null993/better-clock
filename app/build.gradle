@@ -11,8 +11,8 @@ android {
         applicationId "io.github.miuiclock"
         minSdk 31
         targetSdk 36
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 9
+        versionName "1.2.2"
     }
 
     buildTypes {
