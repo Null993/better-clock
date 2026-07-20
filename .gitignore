@@ -11,6 +11,7 @@ local.properties
 # Signing material
 *.jks
 *.keystore
+keystore.properties
 
 # Device diagnostics
 /log/

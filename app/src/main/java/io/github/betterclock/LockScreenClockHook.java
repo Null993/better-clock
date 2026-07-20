@@ -1,4 +1,4 @@
-package io.github.miuiclock;
+package io.github.betterclock;
 
 import android.app.KeyguardManager;
 import android.content.Context;

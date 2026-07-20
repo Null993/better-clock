@@ -4,6 +4,8 @@
 `HH:mm:ss`。当前适配小米 17（HyperOS 3 / Android 16），并增加了一加 Ace 5 Pro /
 ColorOS 的兼容识别与诊断日志。
 
+作者：null993
+
 ## 使用
 
 1. 构建并安装 APK。

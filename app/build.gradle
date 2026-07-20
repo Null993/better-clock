@@ -2,22 +2,43 @@ plugins {
     id "com.android.application"
 }
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+def hasReleaseSigning = keystorePropertiesFile.exists()
+if (hasReleaseSigning) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
-    namespace "io.github.miuiclock"
+    namespace "io.github.betterclock"
     // Quail 3 ships API 37; the APK still targets Android 16 (API 36).
     compileSdk 37
 
     defaultConfig {
-        applicationId "io.github.miuiclock"
+        applicationId "io.github.betterclock"
         minSdk 31
         targetSdk 36
-        versionCode 9
-        versionName "1.2.2"
+        versionCode 10
+        versionName "1.2.3"
+    }
+
+    signingConfigs {
+        if (hasReleaseSigning) {
+            release {
+                storeFile rootProject.file(keystoreProperties["storeFile"])
+                storePassword keystoreProperties["storePassword"]
+                keyAlias keystoreProperties["keyAlias"]
+                keyPassword keystoreProperties["keyPassword"]
+            }
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 
